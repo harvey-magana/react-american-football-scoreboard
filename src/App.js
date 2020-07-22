@@ -5,8 +5,8 @@ import "./App.css";
 
 function App() {
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
-  const [lionValue, setLions] = useState();
-  const [tigerValue, setTigers] = useState();
+  const [lionValue, setLions] = useState(32);
+  const [tigerValue, setTigers] = useState(33);
 
   return (
     <div className="container">
@@ -16,12 +16,12 @@ function App() {
             <h2 className="home__name">Lions</h2>
 
             {/* TODO STEP 3 - We need to change the hardcoded values in these divs to accept dynamic values from our state. */}
-            <div className="home__score">32</div>
+            <div className="home__score">{lionValue}</div>
           </div>
           <div className="timer">00:03</div>
           <div className="away">
             <h2 className="away__name">Tigers</h2>
-            <div className="away__score">32</div>
+            <div className="away__score">{tigerValue}</div>
           </div>
         </div>
         <BottomRow />
