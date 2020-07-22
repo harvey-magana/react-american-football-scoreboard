@@ -8,7 +8,10 @@ function App() {
   const [lionScore, setLions] = useState(32);
   const [tigerScore, setTigers] = useState(33);
   const [count, setCount] = useState(0);
-  console.log(count)
+  const [lionTouchdown, lionSetCount] = useState(0);
+  const [lionFieldGoal, lionFieldCount] = useState(0);
+  const [tigerTouchdown, tigerSetCount] = useState(0);
+  const [tigerFieldGoal, tigerFieldCount] = useState(0);
 
   return (
     <div className="container">
@@ -26,18 +29,18 @@ function App() {
             <div className="away__score">{tigerScore}</div>
           </div>
         </div>
-        <BottomRow count={count} />
+        <BottomRow lionDown={lionTouchdown} lionGoal={lionFieldGoal}/>
       </section>
       <section className="buttons">
         <div className="homeButtons">
 
           {/* TODO STEP 4 - Now we need to attach our state setter functions to click listeners. */}
-          <button className="homeButtons__touchdown" onClick={() => setCount( count + 1 )}>Home Touchdown</button>
-          <button className="homeButtons__fieldGoal" onClick={() => setCount( count + 1 )}>Home Field Goal</button>
+          <button className="homeButtons__touchdown" onClick={() => lionSetCount( lionTouchdown + 1 )}>Home Touchdown</button>
+          <button className="homeButtons__fieldGoal" onClick={() => lionFieldCount( lionFieldGoal + 1 )}>Home Field Goal</button>
         </div>
         <div className="awayButtons">
-          <button className="awayButtons__touchdown" onClick={() => setCount( count + 1 )}>Away Touchdown</button>
-          <button className="awayButtons__fieldGoal" onClick={() => setCount( count + 1 )}>Away Field Goal</button>
+          <button className="awayButtons__touchdown" onClick={() => tigerSetCount( tigerTouchdown + 1 )}>Away Touchdown</button>
+          <button className="awayButtons__fieldGoal" onClick={() => tigerFieldCount( tigerFieldGoal + 1 )}>Away Field Goal</button>
         </div>
       </section>
     </div>
