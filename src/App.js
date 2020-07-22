@@ -29,7 +29,7 @@ function App() {
             <div className="away__score">{tigerScore}</div>
           </div>
         </div>
-        <BottomRow lionDown={lionTouchdown} lionGoal={lionFieldGoal}/>
+        <BottomRow lionDown={lionTouchdown} lionGoal={lionFieldGoal} tigerDown={tigerTouchdown} tigerGoal={tigerFieldGoal}/>
       </section>
       <section className="buttons">
         <div className="homeButtons">
