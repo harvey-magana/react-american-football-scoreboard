@@ -9,7 +9,7 @@ function App() {
   const [tigerScore, setTigers] = useState(0);
   const [lionTouchdown, lionSetCount] = useState(0);
 
-  const [lionFieldGoal, lionFieldCount] = useState(0);
+  const [lionFieldGoal, lionFieldCount] = useState(100);
   const [tigerTouchdown, tigerSetCount] = useState(0);
   const [tigerFieldGoal, tigerFieldCount] = useState(0);
 
@@ -44,7 +44,11 @@ function App() {
         </div>
         <div className="awayButtons">
           <button className="awayButtons__touchdown" onClick={() => tigerFieldCount( tigerFieldGoal >= 3 ? tigerFieldGoal * 0 : tigerFieldGoal + 1)}>Add Quarter</button>
-          <button className="awayButtons__fieldGoal" onClick={() => setTigers( tigerScore + 3 )}>Other Button</button>
+          <button className="awayButtons__fieldGoal" onClick={() => lionSetCount( lionTouchdown + 1 )}>Downs Downs</button>
+        </div>
+        <div className="awayButtons">
+          <button className="awayButtons__touchdown" onClick={() => lionFieldCount( lionFieldGoal - 1)}>To Go</button>
+          <button className="awayButtons__fieldGoal" onClick={() => lionSetCount( lionTouchdown + 1 )}>Ball On</button>
         </div>
       </section>
     </div>
