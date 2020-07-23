@@ -48,7 +48,7 @@ function App() {
         </div>
         <div className="awayButtons">
           <button className="awayButtons__touchdown" onClick={() => lionFieldCount( lionFieldGoal - 1)}>To Go</button>
-          <button className="awayButtons__fieldGoal" onClick={() => lionSetCount( lionTouchdown + 1 )}>Ball On</button>
+          <button className="awayButtons__fieldGoal" onClick={() => tigerSetCount( tigerTouchdown + 1 )}>Ball On</button>
         </div>
       </section>
     </div>
