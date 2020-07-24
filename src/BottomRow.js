@@ -7,7 +7,7 @@ const BottomRow = (props) => {
     <div className="bottomRow">
       <div className="down">
         <h3 className="down__title">Down</h3>
-        <div className="down__value">{props.lionDown + 1}</div>
+        <div className="down__value">{props.downs + 1}</div>
       </div>
       <div className="toGo">
         <h3 className="toGo__title">To Go</h3>

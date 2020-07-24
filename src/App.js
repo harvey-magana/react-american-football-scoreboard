@@ -7,7 +7,7 @@ function App() {
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
   const [lionScore, setLions] = useState(0);
   const [tigerScore, setTigers] = useState(0);
-  const [lionTouchdown, lionSetCount] = useState(0);
+  const [downsSoFar, downsSoFarCount] = useState(0);
 
   const [yardsToGo, yardsToGoCount] = useState(100);
   const [ballOnDisplay, ballOnCount] = useState(0);
@@ -29,7 +29,7 @@ function App() {
             <div className="away__score">{tigerScore}</div>
           </div>
         </div>
-        <BottomRow lionDown={lionTouchdown} yrdToGo={yardsToGo} ballOn={ballOnDisplay} quarter={addQuarter}/>
+        <BottomRow downs={downsSoFar} yrdToGo={yardsToGo} ballOn={ballOnDisplay} quarter={addQuarter}/>
       </section>
       <section className="buttons">
         <div className="homeButtons">
@@ -44,7 +44,7 @@ function App() {
         </div>
         <div className="awayButtons">
           <button className="awayButtons__touchdown" onClick={() => addQuarterCount( addQuarter >= 3 ? addQuarter * 0 : addQuarter + 1)}>Add Quarter</button>
-          <button className="awayButtons__fieldGoal" onClick={() => lionSetCount( lionTouchdown + 1 )}>Downs Downs</button>
+          <button className="awayButtons__fieldGoal" onClick={() => downsSoFarCount( downsSoFar + 1 )}>Downs Downs</button>
         </div>
         <div className="awayButtons">
           <button className="awayButtons__touchdown" onClick={() => yardsToGoCount( yardsToGo - 1)}>To Go</button>
