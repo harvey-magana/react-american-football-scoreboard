@@ -11,7 +11,7 @@ const BottomRow = (props) => {
       </div>
       <div className="toGo">
         <h3 className="toGo__title">To Go</h3>
-        <div className="toGo__value">{props.lionGoal}</div>
+        <div className="toGo__value">{props.yrdToGo}</div>
       </div>
       <div className="ballOn">
         <h3 className="ballOn__title">Ball on</h3>
