@@ -11,7 +11,7 @@ function App() {
 
   const [yardsToGo, yardsToGoCount] = useState(100);
   const [ballOnDisplay, ballOnCount] = useState(0);
-  const [tigerFieldGoal, tigerFieldCount] = useState(0);
+  const [addQuarter, addQuarterCount] = useState(0);
 
   return (
     <div className="container">
@@ -29,7 +29,7 @@ function App() {
             <div className="away__score">{tigerScore}</div>
           </div>
         </div>
-        <BottomRow lionDown={lionTouchdown} yrdToGo={yardsToGo} ballOn={ballOnDisplay} tigerGoal={tigerFieldGoal}/>
+        <BottomRow lionDown={lionTouchdown} yrdToGo={yardsToGo} ballOn={ballOnDisplay} quarter={addQuarter}/>
       </section>
       <section className="buttons">
         <div className="homeButtons">
@@ -43,7 +43,7 @@ function App() {
           <button className="awayButtons__fieldGoal" onClick={() => setTigers( tigerScore + 3 )}>Away Field Goal</button>
         </div>
         <div className="awayButtons">
-          <button className="awayButtons__touchdown" onClick={() => tigerFieldCount( tigerFieldGoal >= 3 ? tigerFieldGoal * 0 : tigerFieldGoal + 1)}>Add Quarter</button>
+          <button className="awayButtons__touchdown" onClick={() => addQuarterCount( addQuarter >= 3 ? addQuarter * 0 : addQuarter + 1)}>Add Quarter</button>
           <button className="awayButtons__fieldGoal" onClick={() => lionSetCount( lionTouchdown + 1 )}>Downs Downs</button>
         </div>
         <div className="awayButtons">
